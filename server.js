@@ -38,7 +38,7 @@ app.get("/api/user_id/:id", async (req, res) => {
   }
 });
 
-app.post("/api/user_id", async (req, res) => {
+app.post("/api", async (req, res) => {
   try {
     const person = await Person.create(req.body);
     res.status(200).json(person);
