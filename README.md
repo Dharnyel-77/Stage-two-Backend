@@ -83,7 +83,7 @@ app.put("/api/user_id/:id", async (req, res) => {
 });
 
 ```
-In the above code, we can update the name of a user by firstly navigating to their id through the route. I used an async function since we're fetching from a database and there could be delays. In the person variable,  I used the findByIdAndUpdate method with three arguments, the id - to help get the id, the req.body - to hold the information from the database and options - to help update the database as soon as changes are made. I also added conditions to display error messages if the operation is suvccesful or not. 
+In the above code, we can update the name of a user by firstly navigating to their id through the route. I used an async function since we're fetching from a database and there could be delays. In the person variable,  I used the findByIdAndUpdate method with three arguments, the id - to help get the id, the req.body - to hold the information from the database and options - to help update the database as soon as changes are made. I also added conditions to display error messages if the operation is successful or not. 
 This was the format I used for all operations in the code.
 
 
