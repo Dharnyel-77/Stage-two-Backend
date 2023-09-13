@@ -10,13 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
 
-app.get("/", (req, res) => {
-  res.send("Hello Person API");
-});
-
-app.get("/api", (req, res) => {
-  res.send("This should be the first route");
-});
 
 app.get("/api", async (req, res) => {
   try {
