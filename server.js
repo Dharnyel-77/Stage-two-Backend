@@ -18,7 +18,7 @@ app.get("/api", (req, res) => {
   res.send("This should be the first route");
 });
 
-app.get("/api/user_id", async (req, res) => {
+app.get("/api", async (req, res) => {
   try {
     const persons = await Person.find({});
     res.status(200).json(persons);
@@ -27,7 +27,7 @@ app.get("/api/user_id", async (req, res) => {
   }
 });
 
-app.get("/api/user_id/:id", async (req, res) => {
+app.get("/api/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const person = await Person.findById(id);
@@ -48,7 +48,7 @@ app.post("/api", async (req, res) => {
   }
 });
 
-app.put("/api/user_id/:id", async (req, res) => {
+app.put("/api/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const options = { new: true };
@@ -66,7 +66,7 @@ app.put("/api/user_id/:id", async (req, res) => {
   }
 });
 
-app.delete("/api/user_id/:id", async (req, res) => {
+app.delete("/api/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const person = await Person.findByIdAndDelete(id);
